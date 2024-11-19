@@ -7,11 +7,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ECA3105B-2A1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E52B3104-D708-4F4E-B1CE-278DB8B01B87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codeflix.Catalogo.UnitTests", "tests\Codeflix.Catalogo.UnitTests\Codeflix.Catalogo.UnitTests.csproj", "{1CBEDBF6-B7E0-4AEB-9F72-6B5326489EA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codeflix.Catalogo.UnitTests", "tests\Codeflix.Catalogo.UnitTests\Codeflix.Catalogo.UnitTests.csproj", "{1CBEDBF6-B7E0-4AEB-9F72-6B5326489EA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codeflix.Catalogo.Domain", "src\Codeflix.Catalogo.Domain\Codeflix.Catalogo.Domain.csproj", "{AA173EB3-2BF3-4A5D-A630-FA4A310308CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codeflix.Catalogo.Domain", "src\Codeflix.Catalogo.Domain\Codeflix.Catalogo.Domain.csproj", "{AA173EB3-2BF3-4A5D-A630-FA4A310308CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codeflix.Catalogo.Application", "src\Codeflix.Catalogo.Application\Codeflix.Catalogo.Application.csproj", "{37447DDC-14CF-4166-8E1A-476464BCE7F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Codeflix.Catalogo.Application", "src\Codeflix.Catalogo.Application\Codeflix.Catalogo.Application.csproj", "{37447DDC-14CF-4166-8E1A-476464BCE7F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "anotacao", "anotacao", "{2BC07727-7934-408B-B270-CB18F6F89FA6}"
+	ProjectSection(SolutionItems) = preProject
+		anotacao.txt = anotacao.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
