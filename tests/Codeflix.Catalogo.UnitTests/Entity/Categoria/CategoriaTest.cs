@@ -1,5 +1,6 @@
 ﻿using DomainEntity = Codeflix.Catalogo.Domain.Entity;
-
+using FluentAssertions;
+using Codeflix.Catalogo.Domain.Entity;
 namespace Codeflix.Catalogo.UnitTests.Entity.Categoria;
 
 public class CategoriaTest
@@ -17,16 +18,15 @@ public class CategoriaTest
 
         var dataAntes = DateTime.Now;
        
-        var categoria = new DomainEntity.Categoria(validaData.Nome, validaData.Descricao, categoria.Ativo);
+        var categoria = new DomainEntity.Categoria(validaData.Nome, validaData.Descricao, validaData.Ativo);
         var dataDepois = DateTime.Now;
 
-        Assert.NotNull(categoria);
-        Assert.Equal(validaData.Nome, categoria.Nome);
-        Assert.Equal(validaData.Descricao, categoria.Descricao);
-        Assert.NotEqual(default(Guid), categoria.Id);
-        Assert.NotEqual(default(DateTime), categoria.DataCriacao);
-        Assert.True(categoria.DataCriacao > dataAntes);
-        Assert.True(categoria.DataCriacao < dataDepois);
-        Assert.True(categoria.Ativo);
+        categoria.Should().NotBeNull();
+        categoria.Nome.Should().Be(validaData.Nome);
+        categoria.Id.Should().NotBeEmpty();
+        categoria.DataCriacao.Should().NotBeSameDateAs(default(DateTime));
+        (categoria.DataCriacao >= dataAntes).Should().BeTrue();
+        (categoria.DataCriacao <= dataDepois).Should().BeTrue();
+        (categoria.Ativo).Should().BeTrue();
     }
 }
