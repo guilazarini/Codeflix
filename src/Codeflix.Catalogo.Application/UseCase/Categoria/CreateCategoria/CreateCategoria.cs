@@ -17,7 +17,7 @@ public class CreateCategoria : ICreateCategoria
 
     public async Task<CreateCategoriaOutput> Handle(CreateCategoriaInput input, CancellationToken cancellationToken)
     {
-        var categoria = new DomainEntity.Categoria(input.Nome, input.Descricao, input.Ativo);
+        var categoria = new DomainEntity.Categoria(input.Nome, input.Descricao);
 
         await _categoriaRepository.Insert(categoria, cancellationToken);
         await _unitOfWork.Commit(cancellationToken);

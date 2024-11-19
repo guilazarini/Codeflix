@@ -1,5 +1,4 @@
-﻿using Codeflix.Catalogo.Domain.Exceptions;
-using Codeflix.Catalogo.Domain.SeedWork;
+﻿using Codeflix.Catalogo.Domain.SeedWork;
 using Codeflix.Catalogo.Domain.Validation;
 
 namespace Codeflix.Catalogo.Domain.Entity;
@@ -10,13 +9,15 @@ public class Categoria : AggregateRoot
     public bool Ativo { get; private set; }
     public DateTime DataCriacao { get; private set; }
 
-    public Categoria(string nome, string descricao, bool ativo)
+    public Categoria(string nome, string descricao, bool ativo = true)
         :base()
     {
         Nome = nome;
         Descricao = descricao;
         Ativo = ativo;
         DataCriacao = DateTime.Now;
+
+        ValidaCategoria();
     }
 
     public void Ativar()
