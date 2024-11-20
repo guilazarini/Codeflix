@@ -1,0 +1,2 @@
+Testes unitarios com fluent assertion e fixture, geracao de dados 
+	randomigos com bogus

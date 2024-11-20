@@ -32,7 +32,7 @@ public class Categoria : AggregateRoot
         ValidaCategoria();
     }
 
-    public void Update(string nome, string descricao)
+    public void Update(string nome, string descricao = null)
     {
         Nome = nome;
         Descricao = descricao ?? Descricao;
